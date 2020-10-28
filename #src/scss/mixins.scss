@@ -1,0 +1,46 @@
+@mixin baground-img($size, $repeat, $position) {
+  background-size: $size;
+  background-repeat: $repeat;
+  background-position: $position;
+}
+
+@mixin txt($family, $size, $height, $weight, $color) {
+  font-family: $family, "arial", sans-serif;
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin title {
+  font-family: "montserrat_italic", "Arial", sans-serif;
+  font-size: 60px;
+  line-height: 1.5;
+  font-weight: 100;
+  letter-spacing: -1px;
+  color: #ffffff;
+}
+@mixin text {
+  font-family: "montserrat", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 100;
+  letter-spacing: -1px;
+  color: black;
+}
+@mixin text2 {
+  font-family: "exo", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 100;
+  letter-spacing: -1px;
+  color: black;
+}
+@mixin firaSans17 {
+  font-family: "firaSans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 170%;
+  color: $color-txt;
+}

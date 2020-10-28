@@ -1,0 +1,567 @@
+.about-me {
+  max-width: 100%;
+  padding: 100px 20% 150px;
+
+  h2 {
+    @include title;
+    color: black;
+    text-align: center;
+    margin: 0 0 50px;
+  }
+}
+
+figure {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .about-me__figure {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      margin: -50px 0 0 -40px;
+    }
+  }
+}
+
+figcaption {
+  width: 500px;
+  @include text;
+}
+
+@media (max-width: 1300px) {
+  .about-me {
+    padding: 100px 13%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .about-me {
+    padding: 100px 3%;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-me {
+    padding: 100px 3%;
+
+    h2 {
+      font-size: 40px;
+    }
+  }
+
+  figcaption {
+    max-width: 300px;
+    line-height: 1.6;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 660px) {
+  .about-me {
+    padding: 50px 3%;
+
+    h2 {
+      font-size: 30px;
+    }
+  }
+
+  figure {
+    .about-me__figure {
+      width: 250px;
+      height: 250px;
+
+      img {
+        width: 350px;
+        height: auto;
+        margin: -60px 0 0 -60px;
+      }
+    }
+  }
+
+  figcaption {
+    line-height: 1.4;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 590px) {
+  .about-me {
+    padding: 50px 0 100px;
+
+    h2 {
+      margin-bottom: 30px;
+    }
+  }
+
+  figure {
+    flex-direction: column;
+
+    .about-me__figure {
+      width: 150px;
+      height: 150px;
+
+      img {
+        width: 280px;
+        height: auto;
+        margin: -60px 0 0 -60px;
+      }
+    }
+  }
+
+  figcaption {
+    max-width: 350px;
+    margin-top: 35px;
+    line-height: 1.8;
+  }
+}
+@media (max-width: 375px) {
+  figcaption {
+    max-width: 300px;
+  }
+}
+.price {
+  padding: 170px 20% 170px 22%;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  background-color: black;
+  background-image: url(../img/bg_home_mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: 32% auto;
+  @include text;
+  font-size: 15.5px;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    opacity: 0.8;
+    z-index: 1;
+  }
+
+  h3 {
+    text-align: center;
+  }
+}
+
+.price__online-ostrov {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+}
+
+.price__online,
+.price__ostrov,
+.price__pskov {
+  position: relative;
+  z-index: 2;
+  background-color: #ffffff;
+  padding: 15px 0 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 280px;
+  height: 180px;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 285px;
+    height: 185px;
+    border-radius: 7px;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    border: 1px solid #ffffff;
+  }
+
+  ul > li {
+    list-style-type: none;
+  }
+}
+
+.price__pskov {
+  padding: 50px 20px;
+  width: 385px;
+  height: 400px;
+
+  &:after {
+    width: 390px;
+    height: 405px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .price {
+    padding: 60px 14vw 60px 18vw;
+  }
+}
+
+@media (max-width: 1100px) {
+  .price {
+    padding: 60px 22vw 60px 18vw;
+    flex-direction: column;
+    height: 550px;
+  }
+
+  .price__online-ostrov {
+    flex-direction: row;
+    height: 180px;
+  }
+
+  .price__pskov {
+    width: 100%;
+    height: 310px;
+    padding: 30px 23%;
+
+    &::after {
+      width: 100.6%;
+      height: 101%;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .price {
+    padding: 60px 16vw 60px 16vw;
+    background-size: 35% auto;
+  }
+}
+
+@media (max-width: 880px) {
+  .price {
+    padding: 60px 22vw 60px 22vw;
+    height: 700px;
+    background-size: 50% auto;
+    line-height: 1.4;
+  }
+
+  .price__pskov {
+    padding: 10px 0 0 5%;
+    height: 255px;
+
+    &::after {
+      width: 101%;
+      height: 101.6%;
+    }
+  }
+
+  .price__online-ostrov {
+    flex-direction: column;
+    height: 400px;
+    justify-content: space-between;
+  }
+
+  .price__online,
+  .price__ostrov {
+    width: 100%;
+    height: 165px;
+    padding: 10px 0 0 5%;
+
+    &::after {
+      width: 101%;
+      height: 102%;
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .price {
+    font-size: 14px;
+    height: 570px;
+
+    h3 {
+      font-size: 15px;
+    }
+  }
+
+  .price__online-ostrov {
+    height: 320px;
+  }
+
+  .price__pskov {
+    padding: 7px 0 0 2%;
+    height: 220px;
+
+    &::after {
+      width: 101.2%;
+    }
+  }
+
+  .price__online,
+  .price__ostrov {
+    height: 145px;
+    padding: 7px 0 0 2%;
+
+    &::after {
+      width: 101.2%;
+      height: 102.8%;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .price {
+    background-size: 102% 105%;
+    padding: 40px 15vw 40px 15vw;
+    @include text2;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    line-height: 1.5;
+    
+  }
+
+  .price__pskov,
+  .price__online,
+  .price__ostrov {
+    ul {
+      margin-left: -20px;
+    }
+  }
+}
+@media (max-width: 415px) {
+  .price {
+    padding: 17vw 10vw 17vw 10vw;
+    height: 555px;
+    &::after {
+      opacity: 0.6;
+    }
+  }
+  .price__online-ostrov {
+    height: 298px;
+  }
+  .price__pskov,
+  .price__online,
+  .price__ostrov {
+    background-color: rgba(29, 29, 29, 0.6);
+    color: #ffffff;
+    padding: 0 0 0 2%;
+    height: 135px;
+    &::after {
+      display: none;
+    }
+    ul {
+      margin-left: -30px;
+    }
+  }
+  .price__ostrov {
+    height: 120px;
+  }
+  .price__pskov {
+    height: 210px;
+    h3 {
+      margin: 10px 0 5px;
+    }
+    ul {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
+.diet {
+  position: relative;
+  width: 100%;
+  height: 65vw;
+  background-image: url(../img/yellow-olives-with-frame-mock-up.jpg);
+  background-size: 100%;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  z-index: 1;
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #ffffff;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+  }
+}
+.diet__content {
+  position: absolute;
+  width: 100%;
+  top: 18vw;
+  left: 0;
+  z-index: 5;
+  padding: 0 50px 0 0;
+  box-sizing: border-box;
+  h2 {
+    margin: 0 0 70px;
+    @include title;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+  }
+  p {
+    width: 280px;
+    line-height: 2;
+    margin: 0 0 70px;
+    @include text;
+    font-size: 22px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  span {
+    display: block;
+    width: 270px;
+    @include text;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    margin: 60px auto 0;
+  }
+}
+
+@media (max-width: 1150px) {
+  .diet {
+    background-size: 120%;
+    height: 80vw;
+  }
+  .diet__content {
+    top: 20vw;
+  }
+}
+@media (max-width: 950px) {
+  .diet {
+    background-size: 140%;
+    height: 92vw;
+  }
+  .diet__content {
+    top: 22vw;
+    span {
+      margin-top: 30px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .diet {
+    background-size: 160%;
+    height: 103vw;
+  }
+}
+@media (max-width: 650px) {
+  .diet__content {
+    padding: 0 30px 0 0;
+    top: 25vw;
+    h2 {
+      font-size: 23px;
+      margin: 0 0 40px;
+    }
+    p {
+      font-size: 18px;
+      width: 250px;
+    }
+    span {
+      font-size: 17px;
+    }
+  }
+}
+@media (max-width: 520px) {
+  .diet {
+    background-size: 170%;
+    background-position: -200px 0;
+    height: 110vw;
+  }
+  .diet__content {
+    padding: 0 90px 0 0;
+    h2 {
+      font-size: 21px;
+    }
+    p {
+      font-size: 17px;
+      width: 250px;
+    }
+    span {
+      width: 180px;
+      font-size: 15px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .diet {
+    background-size: 180%;
+    background-position: -210px 0;
+    height: 120vw;
+  }
+  .diet__content {
+    padding: 0 90px 0 0;
+    top: 27vw;
+    h2 {
+      margin-bottom: 22px;
+    }
+    p {
+      width: 210px;
+    }
+    span {
+      margin-top: 17px;
+    }
+  }
+}
+@media (max-width: 420px) {
+  .diet__content {
+    padding: 0 120px 0 0;
+    h2 {
+      font-size: 19px;
+    }
+    p {
+      font-size: 15px;
+      width: 180px;
+    }
+    span {
+      margin-top: 40px;
+      font-size: 14px;
+      margin-top: 14px;
+      line-height: 1.3;
+    }
+  }
+}
+@media (max-width: 390px) {
+  .diet {
+    background-size: 180%;
+    background-position: -165px 0;
+    .diet__content {
+      padding: 0 60px 0 0; 
+      h2 {
+        margin-bottom: 20px;
+      }
+      span {
+        font-size: 13px;
+        margin-top: 18px;
+      }
+    }
+  }
+}
+@media (max-width: 350px) {
+  .diet {
+    background-size: 180%;
+    background-position: -165px 0;
+    .diet__content {
+      padding: 0 93px 0 0; 
+      h2 {
+        font-size: 18px;
+        margin-bottom: 12px;
+      }
+      p {
+        line-height: 1.4;
+      }
+      span {
+        width: 170px;
+        margin-top: 5px;
+        line-height: 1.2;
+      }
+    }
+  }
+}
